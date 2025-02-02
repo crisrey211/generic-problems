@@ -8,10 +8,31 @@ import Layout from "../layouts/Layout.astro";
     class="min-h-screen grid grid-flow-row grid-rows-auto bg-background-white"
   >
     <div class="container">
-      <LatestOffers />
-      <a href="https://ui.shadcn.com/docs/components/sheet" target="_blank"
-        >Link to Shadcn component
-      </a>
+      <LatestOffers client:media="(max-width: 50em)" />
     </div>
+    <div class="container">
+      <LatestOffers client:idle />
+    </div>
+    <div class="container">
+      <LatestOffers client:load />
+    </div>
+    <div class="media">
+      <LatestOffers client:only />
+    </div>
+    <div>
+      <LatestOffers server:defer />
+    </div>
+    <div>
+      <LatestOffers client:only />
+    </div>
+    <div>
+      <LatestOffers client:visible />
+    </div>
+    <div>
+      <LatestOffers client:only="react" />
+    </div>
+    <a href="https://ui.shadcn.com/docs/components/sheet" target="_blank"
+      >Link to Shadcn component
+    </a>
   </main>
 </Layout>
