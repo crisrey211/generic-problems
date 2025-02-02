@@ -1,0 +1,41 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@":["src/*"],
+      "@components/*": ["src/components/*"],
+      "@sections/*": [
+        "src/components/sections/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@icons/*": [
+        "src/assets/icons/*"
+      ],
+      "@scripts/*": [
+        "src/scripts/*"
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
+      "@aceternityui/*": ["src/components/react/aceternityui/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}
